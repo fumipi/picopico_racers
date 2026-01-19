@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Donkey Car
+mycar/data/
+mycar/logs/
+mycar/models/*.h5
+mycar/models/*.hdf5
+mycar/models/*.pkl
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# その他
+*.pdf
+
+# Cursor/VSCode
+.cursor/
+.cursor-server/
+.vscode-remote-containers/
+*.log
+
+# システムファイル
+.xsession-errors*
+.lesshst
+.sudo_as_admin_successful
+.profile
+.local/
+.keras/
