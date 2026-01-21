@@ -763,3 +763,36 @@
 # # PI connection
 # PI_USERNAME = "pi"
 # PI_HOSTNAME = "donkeypi.local"
+
+# 追加の設定。上のデフォルトはいじっていない
+
+DRIVE_TRAIN_TYPE = "PWM_STEERING_THROTTLE"
+
+PWM_STEERING_THROTTLE = {
+    "PWM_STEERING_PIN": "PCA9685.1:40.1",   # steering servo channel (adjust if needed)
+    "PWM_STEERING_SCALE": 1.0,              # 50Hz board vs Donkey's 60Hz assumption (approx 60/50)
+    "PWM_STEERING_INVERTED": False,
+
+    "PWM_THROTTLE_PIN": "PCA9685.1:40.0",   # ESC on channel 0 (matches your wiring)
+    "PWM_THROTTLE_SCALE": 1.0,              # 50Hz vs 60Hz assumption
+    "PWM_THROTTLE_INVERTED": False,
+
+    # Steering values: keep current placeholders for now; we'll calibrate servo next
+    "STEERING_LEFT_PWM": 460,
+    "STEERING_RIGHT_PWM": 230,
+
+    # Throttle values (0..1000)
+    "THROTTLE_FORWARD_PWM": 324,            # 1370us
+    "THROTTLE_STOPPED_PWM": 307,            # 1500us
+    "THROTTLE_REVERSE_PWM": 287,            # 1610us
+}
+
+# --- Disable physical joystick; use Web UI only ---
+USE_JOYSTICK_AS_DEFAULT = True
+CONTROLLER_TYPE = "xbox"   # prevent xbox controller part from loading
+
+# optional: stop auto-record spam when you touch throttle in Web UI
+AUTO_RECORD_ON_THROTTLE = False
+
+# Allow full throttle range for calibration / testing
+JOYSTICK_MAX_THROTTLE = 1.0
