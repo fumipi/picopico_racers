@@ -788,8 +788,8 @@ PWM_STEERING_THROTTLE = {
 }
 
 # --- Disable physical joystick; use Web UI only ---
-USE_JOYSTICK_AS_DEFAULT = True
-CONTROLLER_TYPE = "xbox"   # prevent xbox controller part from loading
+USE_JOYSTICK_AS_DEFAULT = False
+CONTROLLER_TYPE = "web"   # prevent xbox controller part from loading
 
 # optional: stop auto-record spam when you touch throttle in Web UI
 AUTO_RECORD_ON_THROTTLE = False

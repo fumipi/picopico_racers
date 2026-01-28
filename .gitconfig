@@ -1,0 +1,7 @@
+[user]
+	name = fumipi
+	email = toyodafumiko@gmail.com
+[http]
+	version = HTTP/1.1
+[credential]
+	helper = store

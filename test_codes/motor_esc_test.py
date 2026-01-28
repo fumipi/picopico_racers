@@ -21,7 +21,7 @@ def hold(pca, us: int, sec: float) -> None:
 
 def safe_stop(pca) -> None:
     set_us(pca, STOP)
-    time.sleep(3.0)
+    time.sleep(5.0)
 
 def main() -> None:
     print("=== Confirm FINAL (STOP/FWD/REV) ===")
@@ -32,7 +32,7 @@ def main() -> None:
     pca.frequency = 50
 
     try:
-        hold(pca, STOP, 3.0)
+        hold(pca, STOP, 5.0)
 
         print("\nForward (should go forward)")
         hold(pca, FWD, 1.0)

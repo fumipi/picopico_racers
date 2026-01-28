@@ -52,7 +52,7 @@ def find_limits(pca) -> tuple[int, int, int]:
         move_to(pca, us, 1.0)
         response = input(f"  At {us}us - Continue? (Enter/n): ").strip().lower()
         if response == 'n':
-            rught_limit = us
+            right_limit = us
             break
     else:
         right_limit = MIN_US
