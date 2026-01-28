@@ -1,0 +1,3 @@
+[submodule "M5C_JOYCON"]
+	path = M5C_JOYCON
+	url = https://github.com/uecken/M5C_JOYCON.git
