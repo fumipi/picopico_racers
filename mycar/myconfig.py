@@ -782,14 +782,23 @@ PWM_STEERING_THROTTLE = {
     "STEERING_RIGHT_PWM": 230,
 
     # Throttle values (0..1000)
-    "THROTTLE_FORWARD_PWM": 324,            # 1370us
+#    "THROTTLE_FORWARD_PWM": 324,            # 1370us
+#    "THROTTLE_STOPPED_PWM": 307,            # 1500us
+#    "THROTTLE_REVERSE_PWM": 287,            # 1610us
+    #M5C/rc3
+    "THROTTLE_FORWARD_PWM": 330,            # 1370us
     "THROTTLE_STOPPED_PWM": 307,            # 1500us
-    "THROTTLE_REVERSE_PWM": 287,            # 1610us
+    "THROTTLE_REVERSE_PWM": 281,            # 1610us
 }
 
 # --- Disable physical joystick; use Web UI only ---
+#USE_JOYSTICK_AS_DEFAULT = False
+#CONTROLLER_TYPE = "web"   # prevent xbox controller part from loading
 USE_JOYSTICK_AS_DEFAULT = True
-CONTROLLER_TYPE = "xbox"   # prevent xbox controller part from loading
+#CONTROLLER_TYPE = "xbox"   # prevent xbox controller part from loading
+CONTROLLER_TYPE = "rc3"   # prevent xbox controller part from loading
+
+JOYSTICK_DEVICE_FILE = "/dev/input/js0"
 
 # optional: stop auto-record spam when you touch throttle in Web UI
 AUTO_RECORD_ON_THROTTLE = False
